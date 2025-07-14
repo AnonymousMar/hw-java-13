@@ -1,4 +1,4 @@
-package org.example.getAPI.task3;
+package org.example.task3;
 
 import com.google.gson.*;
 

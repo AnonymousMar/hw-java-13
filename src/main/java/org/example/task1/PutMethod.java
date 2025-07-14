@@ -1,4 +1,4 @@
-package org.example.getAPI.task1;
+package org.example.task1;
 import javax.imageio.IIOException;
 import java.io.IOException;
 import java.net.URI;

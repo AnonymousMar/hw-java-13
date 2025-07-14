@@ -1,4 +1,4 @@
-package org.example.getAPI.task1;
+package org.example.task1;
 import java.io.IOException;
 
 public class API {

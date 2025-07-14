@@ -1,4 +1,4 @@
-package org.example.getAPI.task2;
+package org.example.task2;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
@@ -20,16 +20,14 @@ public class GetMethod {
                 .build();
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            String fileName = "user-" + userId + "-post-" + postId + "-comments.json";
-            FileWriter fileWriter = new FileWriter(fileName);
-            fileWriter.write(response.body());
-            fileWriter.close();
 
+            String fileName = "user-" + userId + "-post-" + postId + "-comments.json";
+           try(FileWriter fileWriter = new FileWriter(fileName)){
+               fileWriter.write(response.body());
+           }
             System.out.println("response.body() = " + response.body());
             return response.body();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
+        } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
     }

@@ -1,4 +1,4 @@
-package org.example.getAPI.task2;
+package org.example.task2;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
